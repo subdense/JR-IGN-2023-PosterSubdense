@@ -1,61 +1,11 @@
-%% This is a new latex template for poster creation
-%% For conferences / research meetings etc.
-%% Following IGN guidelines
+\documentclass[a0paper]{tikzposter}
 
-%% This template is based on tikzposter
-%% With custom style but still a lot of stuff
-%% That needs to be handed-specified
-%% Also the comments are sketchy and the english is poor
-
-%% Tikzposter ->
-%% Copyright (C) 2014 by Pascal Richter, Elena Botoeva, Richard Barnard, and Dirk Surmann
-%%
-%%
-%%
-%%
-%% History:
-%% 17/02/2018 - Creation
-%% 15/01/2020 - Update for the 2020 edition
-%% 12/03/2021 - Date change for 2021 edition
-%%
-%%
-%% If you want to modify the style,
-%% Please define your custom blocks etc.
-%% In the attached files
-%% The name says what is contained in each file.
-%% And the layout themes file is what sums up your custom layout
-%% By precising the block style, background style, color style etc. you need
-%%
-%%
-%% 
-%%
-%% Also if you need the doc, it is available here:
-%% - pdf. doc : https://mirror.hmc.edu/ctan/graphics/pgf/contrib/tikzposter/tikzposter.pdf
-%% - poster example : https://www.sharelatex.com/templates/53332341910d975953dffdab/v/1/pdf?inline=true&name=Tikzposter%20(extended%20example)
-
-
-\documentclass[a0paper]{tikzposter} %Options for format can be included here
-
-%Choose Layout
 \usetheme{Steph}
 
 % Packages
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{natbib}
-\usepackage{amsmath}
-\usepackage{calc}
-\usepackage{graphicx}
-\usepackage{amssymb}
-\usepackage{relsize}
-\usepackage{multirow}
-\usepackage{rotating}
-\usepackage{bm}
-\usepackage{url}
-\usepackage{multicol}
-\usepackage{array}
-\usepackage{subfigure}
-\usepackage{xcolor}
+\usepackage{natbib,mdframed,amsmath,calc,graphicx,amssymb,relsize,multirow,rotating,bm,url,multicol,array,subfigure,eurosym}
 \usepackage{tikz}
 \usetikzlibrary{arrows,patterns, calc, arrows.meta}
 \tikzset{>={Latex[width=3mm,length=5mm]}}
@@ -77,9 +27,6 @@
 \graphicspath{./images}
 
 
-% Here specify title, author and institution
-% Logos that are normally in "titlegraphic"
-% Are specified after
 \title{\textbf{The SubDense project}}
 \author{Mouhamadou Ndim, Bénédicte Bucher, Ana-Maria Raymond, Juste Raimbault, Julien Perret}
 \institute{LASTIG, Univ. Gustave Eiffel, IGN-ENSG}
@@ -92,16 +39,21 @@
     \hspace{-.12\textwidth}
 	\begin{tabular}{lcl}
 	%logo box 1
+        
     	\begin{minipage}[b][.1\textheight][b]{.15\textwidth}
-        	\includegraphics[scale=0.9]{./images/LOGO_IGN}
+      
+        	\includegraphics[scale=1.2]{./figures/LOGO_IGN}
           %\includegraphics[scale=0.4]{./images/logo_ensg}
     	\end{minipage}
     	&
     	%title box
     	\begin{minipage}[b][.1\textheight][b]{.6\textwidth}
-    	
+
+            
+     
     		\centering
     		\color{titlefgcolor}
+            \vspace{1cm}
     		{\bfseries \Huge \sc \@title \par}
     		
     		{\bfseries \huge \sc Collaborative dashboard to study periurban densification \par}
@@ -114,9 +66,7 @@
     	&
     	%logo box 2
     	\begin{minipage}[b][.1\textheight][b]{.15\textwidth}
-        	\begin{tabular}{c}
-            	\includegraphics[width=1\textwidth]{./images/Logo_Subdense}\\~\\
-        	\end{tabular}
+            	\includegraphics[width=1\textwidth]{./figures/Logo_Subdense}
     	\end{minipage}
 	\end{tabular}
 }
@@ -156,11 +106,15 @@
 		
 		%==============================================
 		\block[titlewidthscale=0.35]{Context}{
+
+            \vspace{1cm}
+            
 			\begin{itemize}
-				\item Item 1
-				\item Item 2
-				\item Item 3 
-				\item Item 4 
+				\item Suburban densification as a tool for more sustainable cities while avoiding many negative externalities linked to center densification (scarcity of space, price increase, housing shortage) \cite{jehling2020densification}
+                \vspace{0.5cm}
+				\item Multiple rationalities / conception of space of involved stakeholders (landowners, policy makers, inhabitants) coexist \cite{hartmann2019diversity}
+                \vspace{0.5cm}
+                \item Considerable planning challenges in associated incremental development, need for new policy insights and frameworks \cite{dunnning2020planning}
 			\end{itemize}
 		}
 		%==============================================
@@ -168,23 +122,39 @@
 		% Second column on same line than first one
 		\column{0.34}
 	    %==============================================
-		\block[titlewidthscale=0.3,bodyoffsety=1.8cm,titleoffsety=.1cm]{Objectifs}{
-			
-			Texte pour expliquer les objectifs du travail 
-			
-			\vspace{.5cm}
+		\block[titlewidthscale=0.7]{The SubDense project}{
+
+            % This project seeks to better understand the polyrationalities of space, actors and policies on suburban densification. It will explore how diverse strategies of land policy interact with landowners’ and local stakeholders’ interest and agency to shape suburban densification and their impact on suburbia across different planning systems. 
+            % Thisprojectaims to addressthis knowledge gap using an innovative combination of geodata analysis with social and policy science and planning. The main research objective is to understand polyrationalities of space, actors, and policies on suburban densification. 
+
+            The \textbf{SubDense} European project aims at better understanding \textbf{the polyrationalities of space, actors and policies on suburban densification}, by
+
+            \bigskip
+
+            $\rightarrow$ exploring how diverse strategies of land policy interact with landowners' and local stakeholders' interest and agency to shape suburban densification and their impact on suburbia across different planning systems (France, Germany, UK);
+
+            \bigskip
+
+            $\rightarrow$ combining quantitative approaches (geodata analysis and geosimulation) with qualitative approaches (social and policy science and planning).
+            
+		
 		}
 		%==============================================
 		
 		% Third column on first line
 		\column{0.33}% Width set relative to text width
 		%==============================================
-		\block[titlewidthscale=0.35]{Méthode}{
-			\begin{enumerate}
-				\item Méthode 1
-				\item Méthode 2
-				\item Méthode 3
-			\end{enumerate}
+		\block[titlewidthscale=0.7]{Work packages}{
+
+            % Which data, information infrastructures and approaches enable a comparative spatial analysis of suburban densification and allow for an integration of landowners’ and local stakeholders’ interests and agency? (--> WP1)●How can landowners’ and local stakeholders’ interests and agency be explained in relation to land policies for suburban densification? (--> WP2) ●How do land policies respond to the interests and agency of landowners and local stakeholders in an effective and efficient way?  (--> WP3)
+  
+			\begin{itemize}
+				\item \textbf{WP1:} Which data, information infrastructures and approaches enable a comparative spatial analysis of suburban densification and allow for an integration of stakeholders' interests and agency?
+    
+    $\rightarrow$ \textbf{main LASTIG contribution: } data integration, collaboration in data analysis, geosimulation.
+				\item \textbf{WP2:} How can stakeholders' interests and agency be explained in relation to land policies for suburban densification?
+                \item \textbf{WP3:} How do land policies respond to the interests and agency of stakeholders in an effective and efficient way?
+			\end{itemize}
 		}
 		%==============================================
 		%end of first line
@@ -196,35 +166,58 @@
 
 	\begin{columns}
 		
-		\column{0.25}
+		\column{0.49}
 		%==============================================
-		\block[titlewidthscale=0.8]{Bloc 1}{
-			Texte pour le bloc 1 
+		\block[titlewidthscale=0.7]{Data expertise and analysis}{
 
+            \begin{center}
+            \includegraphics[width=0.5\linewidth]{figures/building_evolution.png}
+            \hspace{2cm}
+            \includegraphics[width=0.25\linewidth]{figures/compar_bdtopo.png}
+            \end{center}
+            
+            \bigskip
 
+            $\rightarrow$ how to share analysis and methods for reproduction on other case studies (\textit{Left figure}: example of change analysis)
+
+            \bigskip
+            
+            % how to integrate this knowledge on data specification into the dashboard so that it is discoverable and reusable by partners?
+
+            $\rightarrow$ how to integrate knowledge on data specification (\textit{Right figure}: change in specifications of BDTopo 2020-2022) so that partners' analysis are not biased?
    
 		}
 		
-		\column{0.45}
+		\column{0.49}
 		%==============================================
-		\block[titlewidthscale=0.52]{Bloc 2}{
-		
+		\block[titlewidthscale=0.9]{Matching algorithms for change detection}{
 
+            \parbox{0.75\linewidth}{
+              \includegraphics[width=\linewidth]{figures/matching}
+		      }
+            \hspace{0.5cm}
+            \parbox{0.2\linewidth}{
+			    \textbf{Typology of changes}
+
+                \bigskip
+
+                {\textcolor{green!50!black}{1:1 stability}}
+
+                {\textcolor{blue}{1:0 destruction}}
+
+                {\textcolor{magenta}{0:1 construction}}
+		      }
+  
+            \vspace{2cm}
+
+            $\rightarrow$ Benchmark of polygon matching algorithms \cite{olteanu2015knowledge}, to provide tools for building change detection
+
+            
    
 		}
 		%==============================================
 		
 		
-		\column{0.3}
-		%==============================================
-		\block[titlewidthscale=0.95]{Bloc 3}{
-		
-		    %This block contain example of images
-			\begin{center}
-				%\includegraphics[scale=1.5]{images/}
-	        \end{center} 
-		}
-		%==============================================
 	\end{columns}
 	
 %------------------------------------------------------
@@ -234,14 +227,38 @@
 	% block alone on its line so you don't have to specify the columns environment
 
 	%==============================================
-	\block[titlewidthscale=0.12]{Résultats}{
-		\parbox{0.5\textwidth}{
-			%\includegraphics[width=18cm,height=20.5cm]{images/} \hspace{.5cm}
-			%\includegraphics[width=18cm,height=20.5cm]{images/} \hspace{.5cm}
-		}
-		\parbox{0.35\textwidth}{
-			
-			
+	\block[titlewidthscale=0.25]{Collaborative dashboard}{
+		\parbox{0.6\textwidth}{
+			\begin{mdframed}
+                \includegraphics[width=\linewidth]{figures/dashboard_archi.png}
+		      \end{mdframed}
+        }
+        \hspace{1cm}
+		\parbox{0.3\textwidth}{
+            
+            $\rightarrow$ A \textbf{collaborative dashboard} as a medium to \textbf{facilitate collaboration} between partners, \textbf{share methods and data}, and ensure reproducibility 
+
+            \bigskip
+              
+              % Ensures trackability, full history, reproducibility, flexibility
+              % Ensure collaboration 
+			$\rightarrow$ The \textbf{git-based architecture} for the core dashboard ensures tractability, full history, reproducibility, flexibility, and collaboration through branching, shared remote repository.
+
+            \bigskip
+    
+            $\rightarrow$ Clients will implement interactions with the core and functionalities needed by partners for data analysis and integration (running change detection algorithms, adding data, exploring results and maps, \ldots).
+
+            % Implementation: from user stories to dashboard specifications
+            %     We propose an iterative process: progressive refinement of user stories and associated specifications​
+            %List of dashboard clients/functionalities to be enriched, and discussed regarding what has priority/is feasible​
+            %Architecture of the repository, ways to describe metadata, data pointers, processes, etc. and to link between all, to be defined based on user stories/practices
+            %Users do not need to have git skills or contribute directly to the repository to produce user stories => shared document for these stories?
+   
+            \bigskip
+
+            $\rightarrow$ An iterative process to produce \textbf{user stories}, finally leading to some specifications for the core architecture and functionalities of clients.
+
+   
 		}
 		%==============================================
 	}
@@ -254,30 +271,29 @@
 		%In this block you can specify possible improvment or any extra information
 		\column{0.25}
 		%==============================================
-		\block[titlewidthscale=0.65]{Bloc 4}{
+		\block[titlewidthscale=0.65]{Future work}{
+            The second part of the project will also involve LASTIG for
 			\begin{itemize}
-			%Here is example for cite a reference from your biblio. 
-				\item Item 1 \citep{Biscotti15}
-				\item Item 2 \citep{karpinski}
+				\item heterogeneous data integration, to couple densification analysis with socio-economic data
+                \item develop and explore simulation models for the impact of policies on densification processes, parametrise these models with the qualitative data obtained through interviews during the project
 			\end{itemize}
 		}
 		
 		\column{0.25}
 		%==============================================
-		\block[titlewidthscale=0.6]{Informations}{
+		\block[titlewidthscale=0.6]{Project details}{
 			\begin{itemize}
-				\item Date de début du projet 
-				\item Institution
-				\item Équipe
-				\item Autre information
-				\item Autre information
+				\item January 2023 -- December 2025
+				\item \textit{Open Research Areas} European grant: 1M\euro
+				\item 4 partners institutions: TU Dortmund, IOER, University of Liverpool, IGN
+                \item 8 permanent researchers, 5 short-term contracts working full time
 			\end{itemize}
 		}
 		
 		\column{0.5}
 		%==============================================
 		% bibliography managed with natbib
-		\block[titlewidthscale=0.3,bodyoffsety=1.8cm,titleoffsety=.1cm]{Bibliographie}{
+		\block[titlewidthscale=0.3,bodyoffsety=1.8cm,titleoffsety=.1cm]{References}{
 			% This command is to prevent the printing of a second "références" in text and to delete white space between block title and bibliography
 			\renewcommand\refname{\vskip -3.4cm}
 			% Bibliography input. 
