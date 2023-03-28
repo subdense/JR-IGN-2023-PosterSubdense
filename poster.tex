@@ -28,7 +28,7 @@
 
 
 \title{\textbf{The SubDense project}}
-\author{Mouhamadou Ndim, Bénédicte Bucher, Ana-Maria Raymond, Juste Raimbault, Julien Perret}
+\author{Mouhamadou Ndim, Juste Raimbault, Bénédicte Bucher, Ana-Maria Raimond, Julien Perret}
 \institute{LASTIG, Univ. Gustave Eiffel, IGN-ENSG}
 \titlegraphic{}
 
@@ -42,8 +42,12 @@
         
     	\begin{minipage}[b][.1\textheight][b]{.15\textwidth}
       
-        	\includegraphics[scale=1.2]{./figures/LOGO_IGN}
-          %\includegraphics[scale=0.4]{./images/logo_ensg}
+        	\includegraphics[width=0.7\linewidth]{./figures/LOGO_IGN}\\
+            
+             \vspace{1cm}
+            
+            \includegraphics[width=0.7\linewidth]{./figures/lastig}%\\
+            %\includegraphics[width=0.7\linewidth]{./figures/meig_strudel}
     	\end{minipage}
     	&
     	%title box
@@ -110,11 +114,11 @@
             \vspace{1cm}
             
 			\begin{itemize}
-				\item Suburban densification as a tool for more sustainable cities while avoiding many negative externalities linked to center densification (scarcity of space, price increase, housing shortage) \cite{jehling2020densification}
+				\item Suburban densification as a tool for more \emph{sustainable cities} while avoiding many negative externalities linked to center densification (scarcity of space, price increase, housing shortage) \cite{jehling2020densification}
                 \vspace{0.5cm}
-				\item Multiple rationalities / conception of space of involved stakeholders (landowners, policy makers, inhabitants) coexist \cite{hartmann2019diversity}
+				\item \emph{Multiple rationalities / conceptions of space} for involved stakeholders (landowners, policy makers, inhabitants) coexist \cite{hartmann2019diversity}
                 \vspace{0.5cm}
-                \item Considerable planning challenges in associated incremental development, need for new policy insights and frameworks \cite{dunnning2020planning}
+                \item Considerable \emph{planning challenges} in associated incremental development, need for new policy insights and frameworks \cite{dunnning2020planning}
 			\end{itemize}
 		}
 		%==============================================
@@ -208,7 +212,7 @@
                 {\textcolor{magenta}{0:1 construction}}
 		      }
   
-            \vspace{2cm}
+            \vspace{1.6cm}
 
             $\rightarrow$ Benchmark of polygon matching algorithms \cite{olteanu2015knowledge}, to provide tools for building change detection
 
@@ -236,13 +240,13 @@
         \hspace{1cm}
 		\parbox{0.3\textwidth}{
             
-            $\rightarrow$ A \textbf{collaborative dashboard} as a medium to \textbf{facilitate collaboration} between partners, \textbf{share methods and data}, and ensure reproducibility 
+            $\rightarrow$ A \textbf{collaborative dashboard} as a medium to \textbf{facilitate collaboration} between partners, \textbf{share methods, data and metadata} \cite{bucher2020conciliating}, and ensure reproducibility 
 
             \bigskip
               
               % Ensures trackability, full history, reproducibility, flexibility
               % Ensure collaboration 
-			$\rightarrow$ The \textbf{git-based architecture} for the core dashboard ensures tractability, full history, reproducibility, flexibility, and collaboration through branching, shared remote repository.
+			$\rightarrow$ The \textbf{git-based architecture} for the core dashboard ensures tractability, full history, reproducibility, flexibility, and collaboration through branching, shared remote repository (\url{https://github.com/subdense}).
 
             \bigskip
     
@@ -274,20 +278,26 @@
 		\block[titlewidthscale=0.65]{Future work}{
             The second part of the project will also involve LASTIG for
 			\begin{itemize}
-				\item heterogeneous data integration, to couple densification analysis with socio-economic data
-                \item develop and explore simulation models for the impact of policies on densification processes, parametrise these models with the qualitative data obtained through interviews during the project
+				\item \emph{heterogeneous data integration} \cite{bucher2021towards}, to couple densification analysis with socio-economic data;
+                \item develop and explore \emph{simulation models} for the impact of policies on densification processes, parametrise these models with the qualitative data obtained through interviews during the project.
 			\end{itemize}
 		}
 		
 		\column{0.25}
 		%==============================================
-		\block[titlewidthscale=0.6]{Project details}{
-			\begin{itemize}
+		\block[titlewidthscale=0.5]{Project details}{
+            
+            \vspace{1cm}
+			
+            \begin{itemize}
 				\item January 2023 -- December 2025
-				\item \textit{Open Research Areas} European grant: 1M\euro
-				\item 4 partners institutions: TU Dortmund, IOER, University of Liverpool, IGN
+				\item \textit{Open Research Area for the Social Sciences} European grant: 1M\euro
+				\item 4 partner institutions: TU Dortmund, IOER, University of Liverpool, IGN
                 \item 8 permanent researchers, 5 short-term contracts working full time
 			\end{itemize}
+
+            \vspace{0.3cm}
+   
 		}
 		
 		\column{0.5}
@@ -295,10 +305,12 @@
 		% bibliography managed with natbib
 		\block[titlewidthscale=0.3,bodyoffsety=1.8cm,titleoffsety=.1cm]{References}{
 			% This command is to prevent the printing of a second "références" in text and to delete white space between block title and bibliography
-			\renewcommand\refname{\vskip -3.4cm}
+            % rq JR: on attend quand même tous le jour où Latex sera moins du bricolage...
+			\renewcommand\refname{\vskip -2cm}
 			% Bibliography input. 
 			%Refrences should be added directly to the Biblio.bib file. Refrences should in bibTex Format. Every Reference cited in the poster will be automatically added.
-			
+            \small
+   
 			\bibliography{Biblio}
 			% Plain style so that cited articles appear as number in the poster and are only fully displayed here
 			\bibliographystyle{plain}
